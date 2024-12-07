@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/premium-vector/line-luxury-gradient-color-minimalist-style-wave_483537-3947.jpg?semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+.app{
+    background: rgb(51, 206, 214);
+    width: 90%;
+    max-width: 650px;
+    margin: 150px auto 0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+
+.answer-btn {
+    background-color: #ffffff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.Next{
+    background-color: #afc3ed;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    max-width: 100px;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+}
+.Next:hover {
+    background: #222;
+    color: #fff;
+
+}
+
+.answer-btn:hover {
+    background: #222;
+    color: #fff;
+}
