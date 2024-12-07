@@ -1,6 +1,6 @@
 const quizData = [
     {
-        audio: "",  // Replace with actual file paths
+        audio: "",
         options: ["Song A", "Song B", "Song C", "Correct Song 1"],
         answer: "Correct Song 1"
     },
@@ -45,10 +45,10 @@ function loadQuestion() {
 }
 
 function selectAnswer(selectedButton) {
-    // Deselect previous selection
+    
     answerButtons.forEach(btn => btn.classList.remove("selected"));
 
-    // Mark current selection
+   
     selectedButton.classList.add("selected");
     userAnswers[currentQuestion] = selectedButton.textContent;
 }
@@ -83,6 +83,6 @@ function showResults() {
     `;
 }
 
-// Load the first question when the page loads
+
 loadQuestion();
 
