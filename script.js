@@ -46,10 +46,10 @@ function loadQuestion() {
 }
 
 function selectAnswer(selectedButton) {
-    // Deselect previous selection
+    
     answerButtons.forEach(btn => btn.classList.remove("selected"));
 
-    // Mark current selection
+   
     selectedButton.classList.add("selected");
     userAnswers[currentQuestion] = selectedButton.textContent;
 }
@@ -87,3 +87,4 @@ function showResults() {
 }
 
 loadQuestion();
+
