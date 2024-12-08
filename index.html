@@ -6,26 +6,20 @@
     <title>MLSC QUIZ</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-
 <body>
     <div class="app">
-        <h1><b>GUESS THE SONG</b></h1>
-        <hr>
+        <h1><b>QUIZ</b></h1>
         <div class="quiz">
-            <h2 id="question">Listen to the song music and guess the correct song:</h2>
-            <audio id="audio" controls>
-                <source src="song.mp3" type="audio/mpeg">
-            </audio>
+            <h2 id="question">Choose the correct answer from the following given choices:</h2>
             <div id="answer-buttons">
-                <button class="answer-btn">Answer 1</button>
-                <button class="answer-btn">Answer 2</button>
-                <button class="answer-btn">Answer 3</button>
-                <button class="answer-btn">Answer 4</button>
-                <button class="Next">NEXT</button>
+                <button class="answer-btn" id="btn1">Answer 1</button>
+                <button class="answer-btn" id="btn2">Answer 2</button>
+                <button class="answer-btn" id="btn3">Answer 3</button>
+                <button class="answer-btn" id="btn4">Answer 4</button>
             </div>
+            <button class="Next">NEXT</button>
         </div>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
