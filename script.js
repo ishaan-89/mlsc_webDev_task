@@ -1,46 +1,47 @@
 const quizData = [
     {
-        audio: "",  // Replace with actual file paths
-        options: ["Song A", "Song B", "Song C", "Correct Song 1"],
-        answer: "Correct Song 1"
+        question: "How many 0.5cm slices can you cut from a bread that is 25cm long?",
+        options: ["50", "25", "39", "40"],
+        answer: "50"
     },
     {
-        audio: "song2.mp3",
-        options: ["Correct Song 2", "Song D", "Song E", "Song F"],
-        answer: "Correct Song 2"
+        question: "There are two clocks of different colors: The green clock is broken and doesn't run at all, but the yellow clock loses one second every 24 hours. Which clock is more accurate?",
+        options: ["Green Clock", "Yellow Clock", "Neither", "Both"],
+        answer: "Green Clock"
     },
     {
-        audio: "song3.mp3",
-        options: ["Song G", "Correct Song 3", "Song H", "Song I"],
-        answer: "Correct Song 3"
+        question: "A farmer has 17 goats. All of them but 8 die. How many goats are alive?",
+        options: ["8", "9", "25", "35"],
+        answer: "8"
     },
     {
-        audio: "song4.mp3",
-        options: ["Song J", "Song K", "Correct Song 4", "Song L"],
-        answer: "Correct Song 4"
+        question: "If Sarah has a red pen, a blue pen, and a green pen, how many different ways can she arrange them in a row on her desk?",
+        options: ["3 ways", "6 ways", "9 ways", "12 ways"],
+        answer: "6 ways"
     },
     {
-        audio: "song5.mp3",
-        options: ["Song M", "Song N", "Song O", "Correct Song 5"],
-        answer: "Correct Song 5"
+        question: "If 'CHAIR' is coded as 'FKDLU', how would 'TABLE' be coded?",
+        options: ["WDFOH", "WDFPH", "WDEOG", "WDEOH"],
+        answer: "WDEOH"
     }
 ];
 
 let currentQuestion = 0;
 let userAnswers = [];
 
-const audioElement = document.getElementById("audio");
+const questionElement = document.getElementById("question");
 const answerButtons = document.querySelectorAll(".answer-btn");
 const nextButton = document.querySelector(".Next");
 
 function loadQuestion() {
     const question = quizData[currentQuestion];
-    audioElement.src = question.audio;
+    questionElement.textContent = question.question;
 
     answerButtons.forEach((btn, index) => {
         btn.textContent = question.options[index];
         btn.classList.remove("selected");
         btn.onclick = () => selectAnswer(btn);
+        
     });
 }
 
@@ -79,10 +80,10 @@ function showResults() {
     document.querySelector(".quiz").innerHTML = `
         <h2>Your Score</h2>
         <p>You got ${score} out of ${quizData.length} correct!</p>
-        <button onclick="location.reload()">Restart</button>
+        <button onclick="location.reload()" class="restart">
+            Restart
+        </button>
     `;
 }
 
-// Load the first question when the page loads
 loadQuestion();
-
